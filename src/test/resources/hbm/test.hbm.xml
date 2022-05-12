@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.test">
+	<class name="TestEntity" table="test_table">
+		<comment>The test table</comment>
+		<id name="id" type="long">
+			<column name="id">
+				<comment>PK column of the table</comment>
+			</column>
+			<generator class="native">
+				<param name="sequence_name">test_seq</param>
+			</generator>
+		</id>
+		<property name="name" type="string">
+			<column name="name">
+				<comment>The test table name colum</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>
